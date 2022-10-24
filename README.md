@@ -16,7 +16,7 @@ Home Page             | List Posts
 ### Method 1
 Inside the folder of your Hugo site run:
 
-    $ git clone https://github.com/canhtran/maverick.git themes/maverick --depth=1
+    $ git clone https://github.com/Winzum/maverick_winzum themes/maverick_winzum --depth=1
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -30,7 +30,7 @@ For more information read the official [setup guide](//gohugo.io/overview/instal
 Using as [submodule](https://www.atlassian.com/git/tutorials/git-submodule)
 
 ```
-$ git submodule add --depth=1 https://github.com/canhtran/maverick.git themes/maverick
+$ git submodule add --depth=1 https://github.com/Winzum/maverick_winzum themes/maverick_winzum
 ```
 
 > Updating theme :
