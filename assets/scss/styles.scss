@@ -192,10 +192,16 @@ hr {
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 .post-date {
     margin: 5% 0 5%;
@@ -247,3 +253,4 @@ img {
     float: right;
     border-radius: 50%;
 }
+
