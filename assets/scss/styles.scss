@@ -154,7 +154,7 @@ h2.post {
 }
 
 header ul a:first-child {
-    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .nav {
@@ -254,3 +254,86 @@ img {
     border-radius: 50%;
 }
 
+.dropdown__nav {
+    background-color: transparent;
+    //padding: 0 1rem;
+    display: grid;
+    place-items: center;
+    width: 5ch;
+    //transition: 280ms all 120ms ease-out;
+
+    ul {
+        grid-auto-flow: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+  
+    li {
+        //margin: 0 0.5rem;
+        padding: 0;
+      }
+    }
+  }
+  
+
+.dropdown {
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+
+    .dropdown__title{
+        background-color: transparent;
+        border: none;
+        font-family: inherit;
+        font-size: medium;
+        display: inline-flex;
+        align-items: center;
+
+        &:after {
+            content: "";
+            border: 0.35rem solid transparent;
+            border-top-color: rgba(black, 0.45);
+            margin-left: 0.25em;
+            transform: translateY(0.15em);
+          }
+    }
+
+    .dropdown__menu {
+        background-color: #fff;
+        border-radius: 4px;
+        //box-shadow: 0 0.15em 0.25em rgba(black, 0.25);
+        //padding: 0.5em 0;
+        width: 5ch;
+        position: absolute;
+        transform: rotateX(-90deg) translateX(-50%);
+        transform-origin: top center;
+        opacity: 0;
+        transition: 120ms all 120ms ease-out;
+         // Pull up to overlap the parent list item very slightly
+        top: calc(100% - 0.25rem);
+        // Use the left from absolute position to shift the left side
+        left: 50%;
+        // Use translateX to shift the menu 50% of it's width back to the left 
+        //transform: translateX(-50%);
+        text-decoration: none;
+        
+        display: inline-block;
+        a {
+            color: inherit;
+            display: block;
+            padding-right: 0;
+            text-decoration: underline;
+        }
+    }
+
+    &:hover,
+    &:focus-within {
+
+        .dropdown__menu {
+        opacity: 1;
+        transform: rotateX(0) translateX(-50%);
+        visibility: visible;
+      } 
+    }
+}
